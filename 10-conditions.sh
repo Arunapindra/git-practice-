@@ -8,3 +8,4 @@ then
     echo "Given no $NUMBER is grater than 20"
 else
     echo "Given no $NUMBER is less than 20"
+fi
