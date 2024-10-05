@@ -4,10 +4,10 @@
 
 FRUITS=("APPLE" "KIWI" "BANANA") #array
 
-echo "first fruit is: ${fruits[0]}"
-echo "second fruit is: ${fruits[1]}"
-echo "third fruit is: ${fruits[2]}"
+echo "first fruit is: ${FRUITS[0]}"
+echo "second fruit is: ${FRUITS[1]}"
+echo "third fruit is: ${FRUITS[2]}"
 
-echo "all fruits are: ${fruits[@]}"
+echo "all fruits are: ${FRUITS[@]}"
 
 
