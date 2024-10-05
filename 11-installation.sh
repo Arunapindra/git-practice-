@@ -12,9 +12,24 @@ dnf list installed git
 
 if [ $? -ne 0 ]
 then 
-    echo "git is not installed, going to intsall"
+    echo "git is not installed, going to intsall now"
     dnf install git -y
 else    
     echo "git is already installed, nothing to do"
 fi
 
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then
+    echo "mysql is not installed, going to install now"
+    dnf intall mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "mysql intallation not success "
+    else
+        echo "mysql installation success"
+    fi 
+else
+    echo "mysql is already intalled, nothing to do"
+fi
