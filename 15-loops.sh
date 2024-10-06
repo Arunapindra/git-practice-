@@ -33,7 +33,16 @@ CHECK_ROOT
 # sh 15-loops.sh git mysql nginx
 for package in $@   #$@ refers to all arguments passed to it
 do
-    echo $package
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then 
+        echo "git is not installed, going to intsall now"
+        dnf install git -y
+        VALIDATE $? "Listing git"
+    else    
+        echo "git is already installed, nothing to do"
+    fi 
+
 done
 # if [ $USERID -ne 0 ]
 # then 
