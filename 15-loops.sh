@@ -36,11 +36,11 @@ do
     dnf list installed $package
     if [ $? -ne 0 ]
     then 
-        echo "git is not installed, going to intsall now"
-        dnf install git -y
-        VALIDATE $? "Listing git"
+        echo "$package is not installed, going to intsall now"
+        dnf install $package -y
+        VALIDATE $? "Listing $package"
     else    
-        echo "git is already installed, nothing to do"
+        echo "$package is already installed, nothing to do"
     fi 
 
 done
