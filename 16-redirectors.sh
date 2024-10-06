@@ -38,6 +38,8 @@ USAGE(){
     exit 1
 }
 
+echo "script started executing at:: $(date)" &>>$LOG_FILE
+
 CHECK_ROOT
 
 if [ $# -eq 0 ]
