@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 if [ -d $SOURCE_DIR ]
 then 
-    echo -e "$SOURCE_DIR $G exixts $N"
+    echo -e "$SOURCE_DIR $G exists $N"
 else
     echo -e " $SOURCE_DIR $R does not exist $N"
     exit 1
